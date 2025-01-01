@@ -1,9 +1,5 @@
 # Makefile Doc Tool
-
-# Makefile Doc Tool
-
-## Description
-**Makefile Doc Tool** is a command-line utility designed to simplify and enhance the usability of your Makefiles. It parses your Makefile to extract targets, dependencies, and comments, and then appends a self-documenting `help` target to make your Makefile user-friendly and easy to understand.
+Makefile Doc Tool a command-line utility designed to simplify and enhance the usability of your Makefiles. It parses your Makefile to extract targets, dependencies, and comments, and then appends a self-documenting `help` target to make your Makefile user-friendly and easy to understand.
 
 ## Features
 - **Automatic Target Parsing**: Extracts Makefile targets along with their dependencies and descriptions.
