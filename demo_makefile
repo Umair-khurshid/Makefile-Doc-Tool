@@ -1,0 +1,8 @@
+build: main.o utils.o # Build the project
+	g++ -o build main.o utils.o
+
+clean: # Clean build artifacts
+	rm -f *.o build
+
+install: # Install the application
+	sudo cp build /usr/local/bin
