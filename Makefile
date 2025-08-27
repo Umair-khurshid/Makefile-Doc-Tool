@@ -28,6 +28,12 @@ test: build
 clean:
 	rm -f $(EXEC) $(TEST_EXEC) *.o
 
+# configure step is not needed
+# configure:
+# 	./configure
+# 	make
+# 	make install
+
 install: build
 	sudo cp $(EXEC) /usr/local/bin/
 
