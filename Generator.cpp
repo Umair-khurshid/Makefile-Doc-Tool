@@ -17,6 +17,7 @@ std::string generateHelpTarget(const std::vector<Target>& targets) {
 
     helpTargetStream << "\t@echo \"\"\n";
     helpTargetStream << "\t@echo \"Check the Makefile to know exactly what each target is doing.\"\n";
+    helpTargetStream << "# --- MAKEFILE-DOC-TOOL-END ---\n";
 
     return helpTargetStream.str();
 }
