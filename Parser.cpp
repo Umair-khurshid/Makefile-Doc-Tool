@@ -6,7 +6,7 @@
 // Function to parse the Makefile and extract targets
 std::vector<Target> parseMakefile(const std::string& filepath) {
     std::vector<Target> targets;
-    std::regex targetPattern(R"(([\w\-\.]+):\s*(.*?)\s+#\s*(.*)$)"); // Allow special characters in names
+    std::regex targetPattern(R"(^([^\s:]+):\s*(.*?)\s+#\s*(.*)$)"); // Allow mostly anything in names except space and colon
     std::ifstream file(filepath);
 
     if (!file.is_open()) {
