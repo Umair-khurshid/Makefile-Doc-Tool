@@ -4,6 +4,8 @@
 // Function to generate the "help" target content for the Makefile
 std::string generateHelpTarget(const std::vector<Target>& targets) {
     std::ostringstream helpTargetStream;
+    helpTargetStream << "\n# --- MAKEFILE-DOC-TOOL-START ---\n";
+    helpTargetStream << ".DEFAULT_GOAL = help\n";
     helpTargetStream << "help: # Print help on Makefile\n";
     helpTargetStream << "\t@echo \"Please use 'make <target>' where <target> is one of\"\n";
     helpTargetStream << "\t@echo \"\"\n";

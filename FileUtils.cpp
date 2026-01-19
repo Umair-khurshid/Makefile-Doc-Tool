@@ -24,7 +24,12 @@ void updateMakefile(const std::string& filepath, const std::string& helpTarget) 
     std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
     file.close();
 
-    size_t pos = content.find(".DEFAULT_GOAL = help");
+    size_t pos = content.find("# --- MAKEFILE-DOC-TOOL-START ---");
+    if (pos == std::string::npos) {
+        // Backward compatibility: match old generated signature
+        pos = content.find(".DEFAULT_GOAL = help");
+    }
+
     if (pos != std::string::npos) {
         content = content.substr(0, pos);
     }
@@ -35,6 +40,5 @@ void updateMakefile(const std::string& filepath, const std::string& helpTarget) 
     }
 
     outfile << content;
-    outfile << "\n.DEFAULT_GOAL = help\n";
     outfile << helpTarget;
 }
