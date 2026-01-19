@@ -1,2 +1,9 @@
 # Executables
 Makefile-doc
+test_runner
+
+# Build Artifacts
+*.o
+
+# Test Artifacts
+test_makefile*
