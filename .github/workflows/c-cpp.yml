@@ -14,12 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Make configure executable
-        run: chmod +x configure
+      run: chmod +x configure
     - name: configure
       run: ./configure
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: make test
+      run: make test
