@@ -20,8 +20,6 @@ std::vector<Target> parseMakefile(const std::string& filepath) {
         std::smatch match;
         if (std::regex_match(line, match, targetPattern)) {
             targets.push_back({match[1], match[2], match[3]});
-        } else if (!line.empty() && line[0] != '#') {
-            std::cerr << "Warning: Could not parse line " << lineNumber << ": " << line << std::endl;
         }
     }
 
